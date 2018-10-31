@@ -17,7 +17,7 @@ const router = new VueRouter({
             name: 'demo',
             component: () => import('@/pages/demo')
         },
-{{#ui}}
+{{/ui}}
         {
             path: '*',
             redirect: '/'
