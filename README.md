@@ -15,5 +15,5 @@ $ npm install -g vue-cli
 ``` shell
 $ vue init lq782655835/standard-vue-template my-project
 $ cd my-project
-$ npm install && npm run serve
+$ npm install && npm run dev
 ```
