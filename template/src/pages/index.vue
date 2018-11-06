@@ -33,5 +33,6 @@ export default {
 
 <style lang="scss" scoped>
 .g-index {
+    margin-left: 10px;
 }
 </style>

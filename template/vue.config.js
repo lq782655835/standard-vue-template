@@ -3,6 +3,7 @@ function resolve(dir) {
 }
 
 const Path = require('path')
+const styleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
     // 项目部署的基础路径
@@ -32,7 +33,19 @@ module.exports = {
             alias: {
                 '@': resolve('src')
             }
-        }
+        },
+        plugins: [
+            new styleLintPlugin({
+                // ignorePath: '.stylelintignore', // default: .stylelintignore
+                configFile: '.stylelintrc.js', // rc file
+                context: 'src', // root path
+                files: '**/*.{vue,html,css,less,scss,sass}',
+                failOnError: false,
+                fix: true, // autofix
+                // lintDirtyModulesOnly: true,
+                quiet: false,
+            })
+        ]
     },
 
     // 配置 webpack-dev-server 行为

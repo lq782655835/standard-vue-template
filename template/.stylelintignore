@@ -1,0 +1,8 @@
+src/components/common
+node_modules/
+src/assets
+dist
+build
+cache
+test
+public

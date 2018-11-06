@@ -25,7 +25,7 @@ export default {
     },
     data() {
         return {
-            open: false,
+            open: false
         }
     },
     computed: {
@@ -45,7 +45,7 @@ export default {
         selectItem(item) {
             this.$emit('select', item)
             this.$emit('update:value', item.value) // allow sync api
-            this.$emit('input', item.value)        // allow v-model api
+            this.$emit('input', item.value) // allow v-model api
             this.open = false
         }
     }

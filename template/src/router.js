@@ -10,14 +10,11 @@ const router = new VueRouter({
             name: 'index',
             component: () => import('@/pages/index')
         },
-
-{{#ui}}
         {
             path: '/demo',
             name: 'demo',
             component: () => import('@/pages/demo')
         },
-{{/ui}}
         {
             path: '*',
             redirect: '/'
